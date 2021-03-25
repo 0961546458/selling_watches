@@ -1,0 +1,744 @@
+@font-face {
+  src: url(../font/Roboto-Regular.ttf);
+  font-family: Roboto-Regular;
+}
+@font-face {
+  src: url(../font/Roboto-Bold.ttf);
+  font-family: Roboto-Bold;
+}
+@font-face {
+  src: url(../font/Roboto-Black.ttf);
+  font-family: Roboto-Black;
+}
+
+*{
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: Roboto-Regular;
+	font-size: 16px;
+}
+.dpl-inline{
+	display: inline;
+}
+.wrap-top-bar{
+	color: #FFFFFF;
+	width: 90%;
+	max-width: 1230px;
+	margin: 0px auto;
+	/*height: 40px;
+	line-height: 40px;*/
+}
+/*-----------------------------thông tin liên lạc------------------------------------*/
+
+#header{
+	background-color: #2D2D2D;
+}
+
+#top-bar{
+	border-bottom: 1px solid #575656;
+	height: 40px;
+	line-height: 40px;
+}
+
+.topBar-address{
+	display: inline;
+	margin-right: 100px;
+}
+
+.topBar-phone{
+	display: inline;
+}
+
+.topBar-address span, .topBar-phone span{
+	font-size: 85%;
+}
+
+.topBar-social-network{
+	display: inline;
+	float: right;
+	font-size: 85%;
+}
+/*-------------------------------------Logo----tìm kiếm--------------------------------------*/
+#masthead{
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #575656;
+}
+.wrap-masthead{
+	width: 90%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+#masthead img{
+	width: 200px;
+	height: 70px;
+}
+
+.masthead-search{
+	display: flex;
+	margin-left: 15%;
+	height: 43px;
+}
+.input-search-top{
+	width: 400px;
+	height: 100%;
+	outline: none;
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ddd;
+    padding-left: 5px;
+}
+.input-search-top:focus{
+    box-shadow: 0px 0px 5px #ccc;
+}
+.button-search-top{
+	height: 100%;
+    width: 60px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #c89979;
+    cursor: pointer;
+    position: relative;
+}
+.button-search-top:hover{
+	background-color: #A18870;
+	border: 1px solid #c89979;
+}
+.button-search-top i{
+	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.top-cart{
+	position: absolute;
+	right: 0px;
+}
+.top-cart i{
+	font-size: 30px;
+}
+
+/*---------------------------------Menu------------------------------------------*/
+#menuAll{
+	width: 100%;
+    height: 55px;
+}
+
+.warap-menu{
+	margin: auto;
+	padding: 0px;
+}
+.warap-menu li{
+	list-style: none;
+	display: inline;
+	margin: 0px 25px;
+}
+.warap-menu li a:hover{
+	border-bottom: 1px solid #c89979;
+}
+
+.warap-menu li a{
+	font-family: Roboto-Bold;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 90%;
+}
+.warap-menu li:hover .link-menu{
+	color: #c89979 !important;
+}
+
+.icon-open-menu{
+	display: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  /*width: 100%;*/
+  display: block;
+  transition: top 0.3s;
+  z-index: 3000;
+  background-color: #2D2D2D;
+}
+#closeMenu{
+	display: none;
+}
+.masthead-search-rps{
+	display: none;
+}
+
+
+
+
+
+/*-------------------riponsize-top-------------------*/
+
+@media screen and (max-width: 849px) {
+	.masthead-search{
+		display: none;
+	}
+	#masthead{
+		border-bottom: none;
+	}
+
+	.icon-open-menu{
+		display: block;
+		position: absolute;
+		cursor: pointer;
+	}
+	.icon-open-menu:hover{
+		color: #c89979;
+	}
+	.icon-open-menu i{
+		font-size: 23px;
+	}
+	.wrap-masthead img{
+		margin: auto;
+	}
+
+	#menuAll{
+    	display: block; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 4000; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		-webkit-animation-name: fadeIn; /* Fade in the background */
+		-webkit-animation-duration: 0.4s;
+		animation-name: fadeIn;
+		animation-duration: 0.4s
+	}
+	#menuAll lable{
+		position: absolute;
+		top: 0px;
+		right: 17px;
+		color: #E0DDDD;
+		font-size: 250%;
+		cursor: pointer;
+	}
+	#menuAll lable:hover{
+		color: #FFFFFF;
+	}
+
+	.wrap-masthead-menu{
+		position: absolute;
+		z-index: 4000;
+		background-color: lightgrey;
+		width: 260px;
+    	height: 100%;
+    	top: 0px;
+
+    	-webkit-animation-name: slideIn;
+		-webkit-animation-duration: 0.4s;
+		animation-name: slideIn;
+		animation-duration: 0.4s
+	}
+
+	.warap-menu{
+		margin: initial;
+		width: 100%;
+	}
+
+	.warap-menu li{
+		display: block;
+		padding: 20px;
+		border-bottom: 1px solid;
+		margin: 0px;
+	}
+	.wrap-masthead{
+		display: block;
+	}
+
+	.masthead-search-rps{
+		display: flex;
+		height: 30px;
+		margin-left: 25px;
+		margin-top: 70px;
+	}
+	.input-search-rps{
+		width: 150px;
+		border-top-left-radius: 0px;
+    	border-bottom-left-radius: 0px;
+    	border: 1px solid #ddd;
+	}
+	.button-search-rps{
+		border-top-right-radius: 0px;
+    	border-bottom-right-radius: 0px;
+	}
+
+}
+
+@-webkit-keyframes slideIn {
+  from {left: -300px; opacity: 0} 
+  to {left: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {left: -300px; opacity: 0}
+  to {left: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
+
+/*------------------------------------Slider sử dụng thư viện Flickity----------------------------------------------*/
+#slider{
+
+}
+.main-carousel{
+
+}
+.carousel-cell{
+	width: 100%;
+	position: relative;
+}
+.main-carousel img{
+	width: 100%;
+	height: 100%;
+}
+
+.slider-text-box{
+	position: absolute;
+	left: 9%;
+    color: #fff;
+    width: 40%;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.slider-text-box h4{
+	font-size: 130%;
+}
+.slider-text-box h1{
+	font-size: 320%;
+}
+.slider-text-box p{
+	margin-top: 12px;
+	line-height: 27px;
+	margin-bottom: 50px;
+}
+
+.slider-text-box a{
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #FFFFFF;
+	padding: 15px 40px;
+	border-radius: 5px;
+	font-weight: 900;
+	text-transform: uppercase;
+	transition: all .5s;
+}
+.slider-text-box a:hover{
+	background-color: #c89979;
+	border: 2px solid #c89979;
+}
+
+/*----------------------------------Banner trên/dưới-------------------------------*/
+#banner-content{
+	width: 100%;
+	display: inline-block;
+}
+.wrap-banner-all{
+	margin-top: 50px;
+}
+
+.banner-left, .banner-right{
+	height: 270px;
+	width: 49%;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner-left{
+	float: left;
+}
+
+.banner-right{
+	float: right;
+}
+
+.banner-left img,.banner-right img{
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	transition: all 1s;
+	object-fit: cover;
+}
+
+.banner-left:hover .img-banner-top,
+.banner-right:hover .img-banner-top{
+	transform: scale(1.1);
+}
+
+.text-box-banner{
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	transform: translate(0%,-50%);
+}
+.text-box-banner h3{
+	font-size: 115%;
+	font-weight: 400;
+}
+.text-box-banner h2{
+	font-size: 250%;
+}
+.hr-banner{
+	width: 50px;
+	height: 3px;
+	background-color: rgb(200, 153, 121);
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+/*-----------------------------------Slider sản phẩm bán chạy------------------------------------------*/
+#products-selling{
+	clear: both;
+    margin-top: 80px;
+}
+.titel-selling{
+
+}
+.titel-selling h2{
+	color: #000000;
+	font-size: 160%;
+}
+
+.main-carousel-sl{
+	color: #000;
+}
+
+.iteam-selling{
+	width: 25%;
+	padding: 15px;
+}
+
+.wrap-in-iteam{
+	border: 1px solid #929090;
+}
+
+.iteam-selling img{
+	width: 100%;
+	height: 100%;
+}
+
+.text-box-selling{
+	border-top: 1px solid #929090;
+	text-align: center;
+}
+
+.text-box-selling h4{
+	font-size: 110%;
+	margin-top: 20px;
+    
+}
+
+.price-selling{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: rgb(200, 153, 121);
+}
+
+.button-selling{
+	margin-bottom: 25px;
+	color: #fff;
+	background-color: #c89979;
+	padding: 6px;
+	margin: 0px 75px 25px 75px;
+}
+
+#products-selling .flickity-prev-next-button{
+	top: 0px;
+	background-color: #fff;
+	width: 45px;
+    height: 30px;
+    display: none;
+    transition: all 1s;
+}
+#products-selling .previous{
+	left: 93%;
+}
+#products-selling .next{
+
+}
+#products-selling :hover .flickity-prev-next-button{
+	display: block;
+}
+
+/*---------------------------banner--dưới-----------------------------------*/
+
+.text-banner-bot{
+	width: 50%;
+}
+.text-banner-bot h2{
+	margin-bottom: 15px;
+}
+.text-banner-bot h3{
+	line-height: 30px;
+}
+.text-up{
+	top: 33px;
+	transform: none;
+}
+.text-down{
+	top: 40%;
+	transform: none;
+}
+
+/*----------------------------------tất cả sản phẩm-------------------------------------------*/
+
+#product{
+	margin-top: 140px;
+}
+
+.wrap-product{
+	color: #000;
+}
+
+.wrap-button-product{
+	display: flex;
+    margin-bottom: 35px;
+}
+
+.product-button-tab{
+	margin-right: 30px;
+	font-size: 170%;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.product-button-tab:hover{
+	color: #c89979;
+}
+
+.wrap-iteam-product{
+
+}
+
+#product .wrap-in-iteam{
+	width: 18.3%;
+	float: left;
+	margin: 10px;
+}
+#product img{
+	width: 100%;
+	height: auto;
+}
+
+#product .button-selling{
+	margin: 13px 50px 22px 50px;
+}
+
+/*------------------------------------News--tin tức-----------------------------------*/
+
+#news{
+	clear: both;
+}
+.wrap-all-new{
+	color: #000;
+	display: flex;
+}
+
+.wrap-iteam-new{
+	flex: 1;
+	margin: 13px;
+	cursor: pointer;
+	margin-top: 100px;
+}
+
+.wrap-img-new{
+	height: 200px;
+	overflow: hidden;
+}
+
+.wrap-img-new img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	object-fit: cover;
+	transition: all .6s;
+}
+
+.wrap-iteam-new:hover .img-news{
+	transform: scale(1.1);
+}
+
+.box-text-new{
+
+}
+
+.box-text-new h5{
+	font-size: 120%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 52px;
+    overflow: hidden;
+}
+
+.box-text-new p{
+	opacity: .8;
+	font-size: 95%;
+}
+
+#hr-bot{
+	margin-top: 65px;
+    margin-bottom: 50px;
+}
+/*-------------------------------------------------------------------------------------*/
+
+
+#registration-information{
+	margin-bottom: 100px;
+}
+
+.wrap-registration{
+	color: #000;
+	display: flex;
+}
+
+.text-registration{
+	flex: 1;
+}
+
+.text-registration h2{
+	text-transform: uppercase;
+	font-size: 150%;
+	margin-left: 20px;
+}
+
+.input-registration{
+	flex: 1;
+	display: flex;
+    margin-left: 230px;
+}
+
+.input-registration input{
+	width: 350px;
+    height: 40px;
+	outline: none;
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    background-color: #ddd;
+    font-size: 92%;
+}
+
+.input-registration .button-registration{
+	background-color: #c89979;
+	text-transform: uppercase;
+	color: #fff;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.button-registration:hover{
+	background-color: #AF7B57;
+}
+
+
+/*------------------------------------------------footer-----------------------------------------------*/
+
+#footer{
+	padding-top: 30px;
+    padding-bottom: 70px;
+    background-color: rgb(51, 51, 51);
+}
+
+.wrap-footer{
+	display: flex;
+}
+
+.wrap-iteam-footer{
+	flex: 1;
+}
+
+.wrap-iteam-footer h3{
+	font-size: 115%;
+	margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.wrap-icon-text{
+	padding-right: 20px;
+	display: flex;
+}
+
+.wrap-icon-text i{
+	margin-right: 20px;
+	line-height: 30px;
+}
+
+.wrap-icon-text .fa-envelope{
+	margin-right: 16px;
+}
+
+.wrap-icon-text p{
+	font-size: 93%;
+	line-height: 30px;
+}
+
+.icon-bot-footer{
+	display: flex;
+}
+
+.wrap-icon-mxh{
+	width: 35px;
+    height: 35px;
+    background-color: #6E6EEE;
+    border-radius: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 10px;
+    border: 1px solid #6E6EEE;
+    cursor: pointer;
+}
+.wrap-icon-mxh:hover{
+	background-color: #5825D8;
+}
+
+.icon-fa-rss{
+	background-color: #F79832;
+	border: 1px solid #F79832;
+}
+.icon-fa-rss:hover{
+	background-color: #FD8300;
+}
+
+.wrap-icon-mxh i{
+	
+}
+
+.img-app{
+	margin-top: 12px;
+}
+
+.img-app img{
+	width: 175px;
+	height: auto;
+}
+
+
