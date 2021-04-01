@@ -29,7 +29,7 @@ draggable: true,
 var flkty = new Flickity( '.main-carousel-sl', {
   // options
   imagesLoaded: true, 
-  groupCells: "100%", 
+  groupCells: "75%", 
   dragThreshold : 5, 
   cellAlign: "left",
   wrapAround: true,
@@ -38,8 +38,7 @@ var flkty = new Flickity( '.main-carousel-sl', {
   pageDots: false, 
   rightToLeft: false, 
   autoPlay : false
-});
-
+})
 // ------------------------danh sách sp-------------------------------
 
 function openCity(namebot, nametop) {
