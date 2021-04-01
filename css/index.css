@@ -16,6 +16,11 @@
 	box-sizing: border-box;
 	font-family: Roboto-Regular;
 	font-size: 16px;
+	padding: 0;
+ 
+	margin: 0;
+	 
+	border: none;
 }
 .dpl-inline{
 	display: inline;
@@ -190,6 +195,7 @@
 		display: block;
 		position: absolute;
 		cursor: pointer;
+		margin-top: 40px;
 	}
 	.icon-open-menu:hover{
 		color: #c89979;
@@ -198,11 +204,14 @@
 		font-size: 23px;
 	}
 	.wrap-masthead img{
-		margin: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 
 	#menuAll{
-    	display: block; /* Hidden by default */
+    	display: none; /* Hidden by default */
 		position: fixed; /* Stay in place */
 		z-index: 4000; /* Sit on top */
 		left: 0;
@@ -251,9 +260,15 @@
 	.warap-menu li{
 		display: block;
 		padding: 20px;
-		border-bottom: 1px solid;
+		border-bottom: 1px solid #C7C6C6;
 		margin: 0px;
+		cursor: pointer;
 	}
+
+	.warap-menu li:hover{
+		background-color: #C2C2C2;
+	}
+
 	.wrap-masthead{
 		display: block;
 	}
@@ -263,18 +278,42 @@
 		height: 30px;
 		margin-left: 25px;
 		margin-top: 70px;
+		margin-bottom: 20px;
 	}
 	.input-search-rps{
 		width: 150px;
 		border-top-left-radius: 0px;
     	border-bottom-left-radius: 0px;
-    	border: 1px solid #ddd;
+    	border: 1px solid #fff;
 	}
 	.button-search-rps{
 		border-top-right-radius: 0px;
     	border-bottom-right-radius: 0px;
 	}
 
+	.warap-menu li a{
+		color: #949393;
+	}
+
+	.warap-menu li a:hover{
+		border-bottom: none;
+	}
+	#closeMenu{
+		display: block;
+		z-index: 5000;
+	}
+
+	/*-------------------------------------------*/
+
+	#top-bar{
+		display: none;
+	}
+	.top-cart{
+		top: 40px;
+	}
+	.top-cart i{
+		font-size: 22px;
+	}
 }
 
 @-webkit-keyframes slideIn {
@@ -308,7 +347,7 @@
 }
 .carousel-cell{
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
 }
 .main-carousel img{
 	width: 100%;
@@ -443,6 +482,7 @@
 .text-box-selling{
 	border-top: 1px solid #929090;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .text-box-selling h4{
@@ -457,13 +497,13 @@
 	color: rgb(200, 153, 121);
 }
 
-.button-selling{
+/*.button-selling{
 	margin-bottom: 25px;
 	color: #fff;
 	background-color: #c89979;
 	padding: 6px;
 	margin: 0px 75px 25px 75px;
-}
+}*/
 
 #products-selling .flickity-prev-next-button{
 	top: 0px;
@@ -536,17 +576,21 @@
 #product .wrap-in-iteam{
 	width: 18.3%;
 	float: left;
-	margin: 10px;
+	margin: 0.8%;
 }
 #product img{
 	width: 100%;
 	height: auto;
 }
 
-#product .button-selling{
+/*#product .button-selling{
 	margin: 13px 50px 22px 50px;
+}*/
+ .button-selling div{
+	background-color: brown;
+    padding: 8px;
+    display: inline-block;
 }
-
 /*------------------------------------News--tin tức-----------------------------------*/
 
 #news{
@@ -739,6 +783,131 @@
 .img-app img{
 	width: 175px;
 	height: auto;
+}
+
+
+
+
+
+/*-----------------------------------RiponSize----------------------------------*/
+@media screen and (max-width: 1234px) {
+	#products-selling .previous {
+	    left: 91%;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.slider-text-box{
+		width: 50%;
+	}
+	.text-down {
+	    top: 10%;
+	}
+}
+@media screen and (max-width: 950px) {
+	.input-search-top{
+		width: 300px;
+	}
+	#products-selling .previous {
+	    left: 88%;
+	}
+	.wrap-img-new{
+		height: 142px;s
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.slider-text-box{
+		font-size: 74%;
+		width: 70%;
+	}
+	.slider-text-box p{
+		margin-bottom: 22px;
+	}
+	#products-selling .previous {
+	    left: 86%;
+	}
+
+	#product .wrap-in-iteam{
+	    width: 31.3%;
+	    margin: 1%;
+	}
+	.input-registration{
+		margin-left: 0px;
+	}
+	.input-registration input{
+		width: 250px;
+	}
+	.input-registration .button-registration{
+		width: 70px;
+		font-size: 87%;
+	}
+	.wrap-button-product{
+		display: initial;
+	}
+	.product-button-tab{
+		margin-bottom: 10px;
+	}
+
+	.wrap-footer {
+	    display: table;
+	}
+	.wrap-iteam-footer {
+	    float: left;
+	    width: 50%;
+	}
+	.clear-b{
+		clear: both;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.banner-left, .banner-right{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#product .wrap-in-iteam {
+	    width: 46%;
+	    margin: 2%;
+	}
+	.wrap-all-new{
+		display: inline-block;
+		width: 100%;
+	}
+	.wrap-registration{
+		display: block;
+	}
+	.text-registration h2{
+		margin-left: 0px;
+		margin-bottom: 20px;
+	}
+
+	.wrap-img-new {
+	    height: 250px;
+	}
+
+	.wrap-iteam-new{
+
+	}
+
+
+	.wrap-iteam-footer{
+		width: 100%;
+	}
+
+	.clear-a{
+		clear: both;
+		width: 50%;
+	}
+	.clear-b{
+		clear: initial;
+		width: 50%;
+	}
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 320px) {
+
 }
 
 
